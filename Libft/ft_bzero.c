@@ -1,28 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adono-ma <adono-ma@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/09 18:06:28 by adono-ma          #+#    #+#             */
-/*   Updated: 2024/03/09 22:00:10 by adono-ma         ###   ########.fr       */
+/*   Created: 2024/03/09 21:41:51 by adono-ma          #+#    #+#             */
+/*   Updated: 2024/03/09 22:00:22 by adono-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include    "libc.h"
+#include "libc.h"
 
-void    *ft_memset(void *str, int c, size_t n);
+void    ft_bzero(void   *trs, size_t    n)
 {
     size_t  i;
-    unsigned char   *s;
+    char    *cpy;
 
-    s = (unsigned char *)str;
     i = 0;
+    cpy = (char *)trs;
     while (i < n)
     {
-        s[i] = c;
+        cpy[i] = '\0';
         i++;
     }
-    return  (str);
 }
