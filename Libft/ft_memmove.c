@@ -1,24 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adono-ma <adono-ma@student.42madrid>       +#+  +:+       +#+        */
+/*   By: adono-ma <adono-ma@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/26 13:22:21 by adono-ma          #+#    #+#             */
-/*   Updated: 2024/03/09 17:12:35 by adono-ma         ###   ########.fr       */
+/*   Created: 2024/01/26 13:22:17 by adono-ma          #+#    #+#             */
+/*   Updated: 2024/01/26 13:42:29 by adono-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#include    "libft.h"
-
-size_t   ft_strlen(const char *str)
-{
-   size_t   count;
-   
-   count = 0;
-   while (str[count] != '\0')
-      count++;
-   return (count);
-}
