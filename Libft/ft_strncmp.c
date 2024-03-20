@@ -1,32 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr                                          :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adono-ma <adono-ma@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/20 17:48:14 by adono-ma          #+#    #+#             */
-/*   Updated: 2024/03/20 17:48:14 by adono-ma         ###   ########.fr       */
+/*   Created: 2024/03/20 19:11:20 by adono-ma          #+#    #+#             */
+/*   Updated: 2024/03/20 19:11:20 by adono-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *strchr(const char *str, int c)/*looks for the first occurrence of c*/
+int strncmp(const char *str1, const char *str2, size_t n)
 {
-    int             i;
-    unsigned char   *cpy;
+    unsigned char   *s1;
+    unsigned char   *s2;
+    size_t          i;
 
+    s1 = (unsigned char *)str1;
+    s2 = (unsigned char *)str2;
     i = 0;
-    cpy = (unsigned char    *)str;
-    while (cpy[i] != '\0')
+    if (n == 0)
+        return (0);
+    while ((s1[i] != '\0') && (i != n - 1))
     {
-        if (cpy[i] == (unsigned char)c)
-            return ((char *)cpy + i);
-        i++;        
+        if (s1[i] != s2[i])
+            return  (s1[i] - s2[i]);
+        i++;
     }
-    if (cpy[i] == (unsigned char)c)
-        return ((char *)cpy + i);
-    else
-        return (0);    
+    return  (s1[i] - s2[i];)    
 }

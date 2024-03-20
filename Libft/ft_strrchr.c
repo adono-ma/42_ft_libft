@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-char *strrchr(const char *str, int c)
+char *strrchr(const char *str, int c)/*looks for the last occurrence of c*/
 {
     int             len;
     unsigned char   *cpy;
