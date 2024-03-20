@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strrchr                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adono-ma <adono-ma@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/24 18:55:40 by adono-ma          #+#    #+#             */
-/*   Updated: 2024/03/09 16:25:16 by adono-ma         ###   ########.fr       */
+/*   Created: 2024/03/20 17:48:14 by adono-ma          #+#    #+#             */
+/*   Updated: 2024/03/20 17:48:14 by adono-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
+#include "libft.h"
 
-#define LIBFT_H
+char *strrchr(const char *str, int c)
+{
+    int             len;
+    unsigned char   *cpy;
 
-#include <stdlib.h>
-#include <unistd.h>
-
-int ft_isalpha(int i);
-int ft_strlen(const char *str);
-int ft_isascii(int i);
-int ft_isdigit(int i);
-int ft_isprint(int i);
-int ft_strlen(const char *str);
-
-#endif
+    len = (unsigned char *)str;
+    cpy = ft_strlen(str);
+    while (len >= 0)
+    {
+        if (cpy[len] == (unsigned char)c)
+            return ((char *)len + cpy);
+        len--;        
+    }
+        return (0);    
+}

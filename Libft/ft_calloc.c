@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adono-ma <adono-ma@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/24 18:55:40 by adono-ma          #+#    #+#             */
-/*   Updated: 2024/03/09 16:25:16 by adono-ma         ###   ########.fr       */
+/*   Created: 2024/03/20 15:41:59 by adono-ma          #+#    #+#             */
+/*   Updated: 2024/03/20 15:41:59 by adono-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
+#include "libft.h"
 
-#define LIBFT_H
+void *ft_calloc(size_t nitems, size_t size)
+/*nitems is the number of elements to be allocated*/
+{
+    void    *ptr;
 
-#include <stdlib.h>
-#include <unistd.h>
-
-int ft_isalpha(int i);
-int ft_strlen(const char *str);
-int ft_isascii(int i);
-int ft_isdigit(int i);
-int ft_isprint(int i);
-int ft_strlen(const char *str);
-
-#endif
+    if (nitems >= SIZE_MAX || size <= SIZE_MAX)
+        return (NULL);
+    ptr = malloc(nitems * size);
+    if (!ptr)
+        return (NULL);
+    ft_bzero(ptr, nitems * size);
+    return (ptr);    
+}
