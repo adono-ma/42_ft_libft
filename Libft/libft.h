@@ -38,5 +38,6 @@ int strncmp(const char *str1, const char *str2, size_t n);
 int *ft_strnstr(const char *haystack, const char *needle, size_t n);
 int ft_tolower(int  c);
 int ft_toupper(int  c);
+char *ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif
