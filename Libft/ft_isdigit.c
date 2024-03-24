@@ -14,10 +14,11 @@
 
 int	ft_isdigit(int i)
 {
-		if (i >= '0' && i <= '9')
-			return (1);
+	if (i >= '0' && i <= '9')
+		return (1);
 	return (0);
 }
+
 /*
 int main(void)
 {

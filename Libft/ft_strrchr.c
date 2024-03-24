@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr                                          :+:      :+:    :+:   */
+/*   ft_strrchr                                          :+:      :+:    :+:  */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adono-ma <adono-ma@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,7 +12,8 @@
 
 #include "libft.h"
 
-char	*strrchr(const char *str, int c)/*looks for the last occurrence of c*/
+char	*strrchr(const char *str, int c)
+/*looks for the last occurrence of c*/
 {
 	int				len;
 	unsigned char	*cpy;

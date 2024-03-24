@@ -24,10 +24,13 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	if (dest == src && n == 0)
 		return (dest);
 	while (i < n)
+	{
 		destv[i] = srcx[i];
 		i++;
+	}
 	return (dest);
 }
+
 /*
 int main    ()
 {

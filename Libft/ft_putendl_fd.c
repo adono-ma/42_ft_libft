@@ -6,11 +6,12 @@
 /*   By: adono-ma <adono-ma@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/24 14:07:01 by adono-ma          #+#    #+#             */
-/*   Updated: 2024/03/24 14:07:01 by adono-ma         ###   ########.fr       */
+/*   Updated: 2024/03/24 17:56:13 by adono-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 void	ft_putendl_fd(char *s, int fd)
 {
 	if (fd < 0)

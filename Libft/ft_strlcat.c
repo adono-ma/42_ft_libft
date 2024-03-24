@@ -17,7 +17,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t n)
 	size_t	destn;
 	size_t	srcn;
 	size_t	i;
-	
+
 	destn = ft_strlen(dest);
 	srcn = ft_strlen(src);
 	i = 0;
@@ -32,8 +32,8 @@ size_t	ft_strlcat(char *dest, const char *src, size_t n)
 			i++;
 		}
 		dest[destn + i] = 0;
-	return (destn + srcn);
+		return (destn + srcn);
 	}
 	else
-	return (n + srcn);
+		return (n + srcn);
 }

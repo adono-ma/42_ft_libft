@@ -15,17 +15,13 @@
 int	ft_atoi(const char *str)
 {
 	int	i;
-	/*index of first digit*/
 	int	sign;
-	/*indicates the sign of the digit, either positive or negative*/
 	int	result;
-	/*indicates the result*/
 
 	i = 0;
 	sign = 1;
 	result = 0;
 	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
-	/*ignores spaces, tabs, back, next and new line*/
 		i++;
 	if (str[i] == '-' || str[i] == '+')
 	{
@@ -35,14 +31,11 @@ int	ft_atoi(const char *str)
 	}
 	while (str[i] >= '0' && str[i] <= '9')
 	{
-		result *= 10; /*multiplies x10*/
+		result *= 10;
 		result *= str[i] - '0';
-		/*adds found result to the total taking the value of str[i] and taking out the '0',
-			so we can get the real number*/
 		i++;
 	}
-	return (sign * result); /*it gives you the final number with it sign,
-	positive or negative*/
+	return (sign * result);
 }
 /*
 int main ()

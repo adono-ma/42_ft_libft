@@ -12,13 +12,13 @@
 
 #include "libft.h"
 
-char *strchr(const char *str, int c)/*looks for the first occurrence of c*/
+char	*strchr(const char *str, int c)/*looks for the first occurrence of c*/
 {
 	int				i;
 	unsigned char	*cpy;
 
 	i = 0;
-	cpy = (unsigned char	*)str;
+	cpy = (unsigned char *)str;
 	while (cpy[i] != '\0')
 	{
 		if (cpy[i] == (unsigned char)c)

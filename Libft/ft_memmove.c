@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                        :+:      :+:    :+:  */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adono-ma <adono-ma@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -25,8 +25,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		return ("");
 	if (dest > src)
 	{
-	 while (n-- != 0)
-		destcpy[n] = srccpy[n];        
+		while (n-- != 0)
+			destcpy[n] = srccpy[n];
 	}
 	else
 	{
@@ -38,6 +38,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
+
 /*
 int main    ()
 {
