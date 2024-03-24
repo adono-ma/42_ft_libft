@@ -15,8 +15,8 @@
 
 void	ft_bzero(void *trs, size_t n)
 {
-	size_t i;
-	char *cpy;
+	size_t	i;
+	char	*cpy;
 
 	i = 0;
 	cpy = (char *)trs;

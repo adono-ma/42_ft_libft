@@ -12,18 +12,18 @@
 
 #include "libft.h"
 
-char *strrchr(const char *str, int c)/*looks for the last occurrence of c*/
+char	*strrchr(const char *str, int c)/*looks for the last occurrence of c*/
 {
-    int             len;
-    unsigned char   *cpy;
+	int				len;
+	unsigned char	*cpy;
 
-    len = (unsigned char *)str;
-    cpy = ft_strlen(str);
-    while (len >= 0)
-    {
-        if (cpy[len] == (unsigned char)c)
-            return ((char *)len + cpy);
-        len--;        
-    }
-        return (0);    
+	len = (unsigned char *)str;
+	cpy = ft_strlen(str);
+	while (len >= 0)
+	{
+		if (cpy[len] == (unsigned char)c)
+			return ((char *)len + cpy);
+		len--;
+	}
+	return (0);
 }

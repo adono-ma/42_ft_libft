@@ -12,20 +12,20 @@
 
 #include "libft.h"
 
-int ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
-    int i;
-    /*index of first digit*/
-	int sign;
-    /*indicates the sign of the digit, either positive or negative*/
-	int result;
-    /*indicates the result*/
+	int	i;
+	/*index of first digit*/
+	int	sign;
+	/*indicates the sign of the digit, either positive or negative*/
+	int	result;
+	/*indicates the result*/
 
 	i = 0;
 	sign = 1;
 	result = 0;
 	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
-    /*ignores spaces, tabs, back, next and new line*/
+	/*ignores spaces, tabs, back, next and new line*/
 		i++;
 	if (str[i] == '-' || str[i] == '+')
 	{

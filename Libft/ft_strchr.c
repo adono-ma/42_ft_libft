@@ -14,19 +14,19 @@
 
 char *strchr(const char *str, int c)/*looks for the first occurrence of c*/
 {
-    int             i;
-    unsigned char   *cpy;
+	int				i;
+	unsigned char	*cpy;
 
-    i = 0;
-    cpy = (unsigned char    *)str;
-    while (cpy[i] != '\0')
-    {
-        if (cpy[i] == (unsigned char)c)
-            return ((char *)cpy + i);
-        i++;        
-    }
-    if (cpy[i] == (unsigned char)c)
-        return ((char *)cpy + i);
-    else
-        return (0);    
+	i = 0;
+	cpy = (unsigned char	*)str;
+	while (cpy[i] != '\0')
+	{
+		if (cpy[i] == (unsigned char)c)
+			return ((char *)cpy + i);
+		i++;
+	}
+	if (cpy[i] == (unsigned char)c)
+		return ((char *)cpy + i);
+	else
+		return (0);
 }

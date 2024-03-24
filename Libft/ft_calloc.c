@@ -12,16 +12,16 @@
 
 #include "libft.h"
 
-void *ft_calloc(size_t nitems, size_t size)
+void	*ft_calloc(size_t nitems, size_t size)
 /*nitems is the number of elements to be allocated*/
 {
-    void    *ptr;
+	void	*ptr;
 
-    if (nitems >= SIZE_MAX || size <= SIZE_MAX)
-        return (NULL);
-    ptr = malloc(nitems * size);
-    if (!ptr)
-        return (NULL);
-    ft_bzero(ptr, nitems * size);
-    return (ptr);    
+	if (nitems >= SIZE_MAX || size <= SIZE_MAX)
+		return (NULL);
+	ptr = malloc(nitems * size);
+	i	(!ptr)
+		return (NULL);
+	ft_bzero(ptr, nitems * size);
+	return (ptr);
 }

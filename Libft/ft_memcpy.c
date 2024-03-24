@@ -12,33 +12,32 @@
 
 #include "libft.h"
 
-void *ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-    size_t  i;
-    const   unsigned char   *srcx;
-    unsigned char   *destv;
-    size_t  i;
+	size_t				i;
+	const unsigned char	*srcx;
+	unsigned char		*destv;
 
-    srcx = (const unsigned char *)src;
-    destv = (unsigned char *)dest;
-    i = 0;
-    if (dest == src && n == 0)
-        return (dest);
-    while (i < n)
-        destv[i] = srcx[i];
-        i++;
-    return (dest);
+	srcx = (const unsigned char *)src;
+	destv = (unsigned char *)dest;
+	i = 0;
+	if (dest == src && n == 0)
+		return (dest);
+	while (i < n)
+		destv[i] = srcx[i];
+		i++;
+	return (dest);
 }
 /*
 int main    ()
 {
-    const char src[] = "cortarporaquí";
-    char dest[];
-    destv(dest, "loquehabiaantes");
-    printf("prev ft_memcpy dest = %s\n", dest);
-    ft_memcpy(dest, src, ft_strlen(src)+1);
-    printf("next ft_memcpy dest = %s\n", dest);
+	const char src[] = "cortarporaquí";
+	char dest[];
+	destv(dest, "loquehabiaantes");
+	printf("prev ft_memcpy dest = %s\n", dest);
+	ft_memcpy(dest, src, ft_strlen(src)+1);
+	printf("next ft_memcpy dest = %s\n", dest);
 
-    return(0);
+	return(0);
 }
 */
