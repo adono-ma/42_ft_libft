@@ -1,36 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adono-ma <adono-ma@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/22 22:10:52 by adono-ma          #+#    #+#             */
-/*   Updated: 2024/03/22 22:28:39 by adono-ma         ###   ########.fr       */
+/*   Created: 2024/03/24 13:38:26 by adono-ma          #+#    #+#             */
+/*   Updated: 2024/03/24 13:38:26 by adono-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char		*substr;
-	unsigned char	i;
+	char	*join;
+	size_t	len;
 
-	i = 0;
-	if (*s == 0 || start >= ft_strlen(s) || len <= 0)
-		return (ft_strdup(""));
-	if (len > ft_strlen(s) - start)
-		len = ft_strlen(s) - start;
-	substr = malloc(sizeof(char) * len + 1);
-	if (!substr)
+	if (!s1 || !s2)
 		return (0);
-	while (i < len && s[start] != '\0')
-	{
-		substr[i] = s[start];
-		start++;
-		i++;
-	}
-	substr[i] = '\0';
-	return (substr);
+	len = ft_strlen(s1) + ft_strlen(s2) + 1;
+	join = (char *)malloc(sizeof(char) * len);
+	if (!join)
+		return (0);
+	ft_strlcpy(join, (char *)s1, len);
+	ft_strlcat(join, s2, len);
+	return (join);
 }
