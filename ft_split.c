@@ -82,7 +82,7 @@ int	main(void)
 	
 	i = 0;
 	subs = ft_split(s, c);
-	while (tab[i)
+	while (subs[i])
 	{
 		printf("%s\n",subs[i]);
 		free(subs[i]);

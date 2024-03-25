@@ -22,8 +22,6 @@ int	ft_isdigit(int i)
 /*
 int main(void)
 {
-	printf("%d\ n", ft_isdigit('s'))
-	return (0);
-
-
+ 
+}
 */

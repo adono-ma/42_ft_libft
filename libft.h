@@ -16,6 +16,7 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include <stddef.h>
 
 int		ft_isalpha(int i);
 int		ft_isalnum(int i);
