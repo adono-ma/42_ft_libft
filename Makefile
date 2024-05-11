@@ -45,7 +45,12 @@ SRC = ft_isalnum.c \
 		ft_split.c \
 		ft_itoa.c \
 
+BONUS = ft_lstnew_bonus.c \
+		
+
 OBJ = $(SRC:%.c=%.o) #Check the objects that go from C to binary. Compilation
+
+OBJ_BONUS = $(BONUS:%.c=%.o)
 
 CC = gcc
 
@@ -65,23 +70,26 @@ NAME = libft.a
 # results (what do I want to obtain) :   what do I need
 #		+ tab   Instructions
 
-all: ${NAME}
+all: $(NAME)
 
-${NAME}: ${OBJ}
-	$(AR) ${NAME} ${OBJ}
+$(NAME): $(OBJ)
+	$(AR) $(NAME) ${OBJ}
 
-#${OBJ}: $(SRC)
+#$(OBJ): $(SRC)
 #	$(CC) $(CFLAGS) -c $< -o $@
 # $< first prerequirement to create my output (in this case SRC)
 # $@ -> target. is the same as to put 
 # $(OBJ): $(SRC)
 
+bonus: $(OBJ_BONUS) $(NAME)
+	$(AR) $(NAME) $(OBJ_BONUS)
+
 clean:
-	$(RM) $(RMFLAGS) ${OBJ} 
+	$(RM) $(RMFLAGS) $(OBJ) $(OBJ_BONUS)
 #it might work with %.o, check it out
 
 fclean:	clean
-	$(RM) $(RMFLAGS) ${NAME}
+	$(RM) $(RMFLAGS) $(NAME) $(OBJ) $(OBJ_BONUS)
 
 re: fclean all
 

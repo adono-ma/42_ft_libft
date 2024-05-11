@@ -18,6 +18,12 @@
 # include <unistd.h>
 # include <stddef.h>
 
+typedef struct	s_list
+{
+	void			*content;
+	struct s_list	*next;
+}t_list;
+
 int		ft_isalpha(int i);
 int		ft_isalnum(int i);
 int		ft_isascii(int i);
@@ -53,5 +59,7 @@ void	ft_putnbr_fd(int n, int fd);
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_itoa(int n);
 char	**ft_split(char const *s, char c);
+
+t_list	*ft_lstnew(void *content);
 
 #endif
