@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstdelone.c		                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adono-ma <adono-ma@student.42.fr>          +#+  +:+       +#+        */
+/*   By: adono-ma <adono-ma@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/24 12:58:33 by adono-ma          #+#    #+#             */
 /*   Updated: 2024/05/24 12:58:33 by adono-ma         ###   ########.fr       */

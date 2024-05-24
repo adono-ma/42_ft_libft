@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap.c        	                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adono-ma <adono-ma@student.42.fr>          +#+  +:+       +#+        */
+/*   By: adono-ma <adono-ma@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/24 12:59:29 by adono-ma          #+#    #+#             */
 /*   Updated: 2024/05/24 12:59:29 by adono-ma         ###   ########.fr       */
