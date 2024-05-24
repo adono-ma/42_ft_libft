@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c          		                        :+:      :+:    :+:   */
+/*   ft_lstlast.c 		                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adono-ma <adono-ma@student.42madrid>       +#+  +:+       +#+        */
+/*   By: adono-ma <adono-ma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/23 15:27:05 by adono-ma          #+#    #+#             */
-/*   Updated: 2024/05/23 15:27:05 by adono-ma         ###   ########.fr       */
+/*   Created: 2024/05/24 12:59:17 by adono-ma          #+#    #+#             */
+/*   Updated: 2024/05/24 12:59:17 by adono-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	while	(lst)
+	while (lst)
 	{
-		if	(lst->next == NULL)
+		if (lst->next == NULL)
 			return (NULL);
 		lst = lst->next;
 	}

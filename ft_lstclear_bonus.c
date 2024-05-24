@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c             		                    :+:      :+:    :+:   */
+/*   ft_lstclear .c            		                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adono-ma <adono-ma@student.42madrid>       +#+  +:+       +#+        */
+/*   By: adono-ma <adono-ma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/23 16:02:22 by adono-ma          #+#    #+#             */
-/*   Updated: 2024/05/23 16:02:22 by adono-ma         ###   ########.fr       */
+/*   Created: 2024/05/24 12:58:21 by adono-ma          #+#    #+#             */
+/*   Updated: 2024/05/24 12:58:21 by adono-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstclear(t_list **lst, void (*del)(void *))
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*node;
 
-	while	(*lst)
+	while (*lst)
 	{
 		node = (*lst)->next;
 		(del)((*lst)->content);

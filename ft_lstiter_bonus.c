@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c         		                        :+:      :+:    :+:   */
+/*   ft_lstiter.c 		                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adono-ma <adono-ma@student.42madrid>       +#+  +:+       +#+        */
+/*   By: adono-ma <adono-ma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/23 16:10:10 by adono-ma          #+#    #+#             */
-/*   Updated: 2024/05/23 16:10:10 by adono-ma         ###   ########.fr       */
+/*   Created: 2024/05/24 12:59:08 by adono-ma          #+#    #+#             */
+/*   Updated: 2024/05/24 12:59:08 by adono-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstiter(t_list *lst, void (*f)(void *))
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	if	(!lst || !f)
+	if (!lst || !f)
 		return ;
-	while	(lst)
+	while (lst)
 	{
 		(*f)(lst->content);
 		lst = lst->next;

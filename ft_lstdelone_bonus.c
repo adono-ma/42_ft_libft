@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c               		                :+:      :+:    :+:   */
+/*   ft_lstdelone.c		                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adono-ma <adono-ma@student.42madrid>       +#+  +:+       +#+        */
+/*   By: adono-ma <adono-ma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/23 15:48:26 by adono-ma          #+#    #+#             */
-/*   Updated: 2024/05/23 15:48:26 by adono-ma         ###   ########.fr       */
+/*   Created: 2024/05/24 12:58:33 by adono-ma          #+#    #+#             */
+/*   Updated: 2024/05/24 12:58:33 by adono-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstdelone(t_list *lst, void (*del)(void *))
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	if	(!list || !del)
+	if (!list || !del)
 		return ;
 	(del)(list->content);
 	free(lst);
